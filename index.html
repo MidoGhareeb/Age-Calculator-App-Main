@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- the page title -->
+    <title>Age Calculator App Main</title>
+    <!-- the page icon -->
+    <link rel="icon" href="image/favicon-32x32.png" />
+    <!-- import the main css file -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- the main container -->
+    <div class="container">
+      <div class="form">
+        <!-- input for days -->
+        <div class="days">
+          <label  for="day">DAY</label>
+          <input type="number" id="day" placeholder="DD" />
+          <label class="error dayerr" for="day">This field is required</label>  <!--the label if there was error-->
+        </div>
+        <!-- input for month -->
+        <div class="months">
+          <label for="month">MONTH</label>
+          <input type="number" id="month" placeholder="MM" />
+          <label class="error montherr" for="month">This field is required</label>  <!--the label if there was error-->
+        </div>
+        <!-- input for year -->
+        <div class="years">
+          <label for="year">YEAR</label>
+          <input type="number" id="year" placeholder="YYYY" />
+          <label class="error yearerr" for="year">This field is required</label> <!--the label if there was error-->
+        </div>
+        <!-- button to calculate the age -->
+        <button onclick="calcAge()" id="calc">
+          <img src="image/icon-arrow.svg" alt="calc" />
+        </button>
+      </div>
+      <!-- the result of the age -->
+      <div class="result">
+        <h1><span class="year-result">--</span> years</h1>
+        <h1><span class="month-result">--</span> months</h1>
+        <h1><span class="day-result">--</span> days</h1>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

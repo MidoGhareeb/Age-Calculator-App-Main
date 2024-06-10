@@ -1,0 +1,154 @@
+/* to import the google font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* the main color variable */
+:root {
+  /* ### Primary */
+  --Purple: hsl(259, 100%, 65%);
+  --Light-red: hsl(0, 100%, 67%);
+  /* ### Neutral */
+  --White: hsl(0, 0%, 100%);
+  --Off-white: hsl(0, 0%, 94%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+  --Off-black: hsl(0, 0%, 8%);
+}
+/* global styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--Off-white);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+}
+.container {
+  width: 90%;
+  background-color: var(--White);
+  padding: 40px 20px;
+  border-radius: 15px 15px 100px 15px;
+}
+.container .form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid var(--Light-grey);
+  padding-bottom: 70px;
+  position: relative;
+}
+.container .form .days,
+.container .form .months,
+.container .form .years {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-self: start;
+}
+.container .form input {
+  width: 80px;
+  padding: 10px;
+  border: 1px solid var(--Light-grey);
+  border-radius: 5px;
+  font-weight: 800;
+  font-size: 16px;
+}
+.container .form input.errorr{
+  border-color: var(--Light-red);
+}
+.container .form input::placeholder {
+  color: var(--Light-grey);
+}
+.container .form input::-webkit-inner-spin-button,
+.container .form input::-webkit-outer-spin-button {
+  appearance: none;
+}
+.container .form label {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  color: var(--Smokey-grey);
+}
+.container .form .error {
+  font-weight: 400;
+  letter-spacing: 0px;
+  font-style: italic;
+  font-size: 8px;
+  color: var(--Light-red);
+  display: none;
+}
+.container .form button {
+  position: absolute;
+  border: 0;
+  outline: 0;
+  background-color: var(--Purple);
+  padding: 15px;
+  border-radius: 50%;
+  bottom: 0;
+  right: 50%;
+  transform: translate(50%, 50%);
+  cursor: pointer;
+}
+.container .form button img {
+  width: 30px;
+}
+.container .result {
+  padding: 50px 0 10px;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+.container .result h1 {
+  font-size: 50px;
+  font-style: italic;
+  font-weight: 800;
+  color: var(--Off-black);
+}
+.container .result h1 span {
+  color: var(--Purple);
+} 
+/* media quere for medium screen */
+@media screen and (min-width: 490px) {
+  .container {
+    width: 470px;
+  }
+  .container .form {
+    justify-content: flex-start;
+    gap: 15px;
+    padding-bottom: 10px;
+    width: 95%;
+  }
+  .container .form button {
+    right: 0px;
+    transform: translateY(50%);
+  }
+}
+/* media quere for larg screen */
+@media screen and (min-width: 790px) {
+  .container {
+    width: 600px;
+    padding: 50px 30px;
+  }
+  .container .form{
+    padding-bottom: 25px;
+  }
+  .container .form input {
+    width: 110px;
+    padding: 10px;
+    border: 1px solid var(--Light-grey);
+    border-radius: 5px;
+    font-weight: 800;
+    font-size: 20px;
+  }
+  .container .result h1 {
+    font-size: 60px;
+  }
+  .container .form .error {
+    font-size: 10px;
+  }
+}
