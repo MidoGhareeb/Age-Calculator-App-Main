@@ -57,8 +57,12 @@ body {
   border-radius: 5px;
   font-weight: 800;
   font-size: 16px;
+  outline: none;
 }
-.container .form input.errorr{
+.container .form input:focus {
+  border-color: var(--Purple);
+}
+.container .form input.errorr {
   border-color: var(--Light-red);
 }
 .container .form input::placeholder {
@@ -92,7 +96,11 @@ body {
   bottom: 0;
   right: 50%;
   transform: translate(50%, 50%);
+  transition: 0.3s ease;
   cursor: pointer;
+}
+.container .form button:hover {
+  background-color: var(--Off-black);
 }
 .container .form button img {
   width: 30px;
@@ -111,7 +119,7 @@ body {
 }
 .container .result h1 span {
   color: var(--Purple);
-} 
+}
 /* media quere for medium screen */
 @media screen and (min-width: 490px) {
   .container {
@@ -134,7 +142,7 @@ body {
     width: 600px;
     padding: 50px 30px;
   }
-  .container .form{
+  .container .form {
     padding-bottom: 25px;
   }
   .container .form input {
